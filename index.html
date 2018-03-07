@@ -9,11 +9,16 @@
 
   </head>
   <body>
-    <h1>Flash Bitácora</h1>
-    <p></p>
+    <section class="container">
+      <h1>Flash Bitácora</h1>
+      <p>Ingresa tu mensaje</p>
+    </section>
+    <section id="container-publication" class="container">
+
+    </section>
 
     <!-- class="datepicker" -->
-
+    <!-- FAB fixed-action-btn -->
     <div class="fixed-action-btn horizontal click-to-toggle">
       <a class="btn-floating btn-large red">
         <i class="large material-icons">mode_edit</i>
@@ -25,12 +30,13 @@
         <li><a class="btn-floating blue modal-trigger" href="#modal-media"><i class="material-icons">movie</i></a></li>
       </ul>
     </div>
+    <!-- FIN FAB -->
 
     <!-- Modal Comentarios -->
     <div id="modal-coment" class="modal">
       <div class="modal-content container">
         <div class="row">
-           <form class="col s12">
+           <form  id="public-coment" class="col s12">
              <div class="row">
                <div class="input-field col s6">
                  <input id="titulo-coment" type="text" data-length="10">
@@ -39,20 +45,20 @@
              </div>
              <div class="row">
                <div class="input-field col s12">
-                 <textarea id="menssage-coment" class="materialize-textarea" data-length="120"></textarea>
+                 <textarea id="message-coment" class="materialize-textarea" data-length="120"></textarea>
                  <label for="menssage-coment">Mensaje</label>
                </div>
              </div>
+             <div class="modal-footer">
+               <button class="btn modal-action modal-close waves-effect waves-light" type="button" name="action">Cancelar
+                 <i class="material-icons right">cancel</i>
+               </button>
+               <button  class="btn modal-action modal-close waves-effect waves-light" type="submit" name="action">Publicar
+                 <i class="material-icons right">send</i>
+               </button>
+             </div>
            </form>
          </div>
-      </div>
-      <div class="modal-footer">
-        <button class="btn modal-action modal-close waves-effect waves-light" type="button" name="action">Cancelar
-          <i class="material-icons right">cancel</i>
-        </button>
-        <button class="btn modal-action modal-close waves-effect waves-light" type="submit" name="action">Publicar
-          <i class="material-icons right">send</i>
-        </button>
       </div>
     </div>
     <!-- Fin modal comentarios -->
@@ -61,7 +67,7 @@
     <div id="modal-img" class="modal">
       <div class="modal-content container">
         <div class="row">
-           <form class="col s12">
+           <form id="public-Image" class="col s12">
              <div class="row">
                <div class="input-field col s12">
                  <input id="titulo-img" type="text" data-length="10">
@@ -73,7 +79,6 @@
                  <input id="input-file"  type="file" accept="image/*">
                </div>
              </div>
-
              <div class="modal-footer">
                <button class="btn modal-action modal-close waves-effect waves-light" type="button" name="action">Cancelar
                  <i class="material-icons right">cancel</i>
